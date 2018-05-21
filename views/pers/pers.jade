@@ -1,0 +1,25 @@
+extends ../templates/default
+
+block content
+
+
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['sixteen','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Vista previa de enfermedades'
+
+      table(class=['ui', 'table', 'celled'] id='tbl-como')
+        thead
+          tr
+            th= 'Nombre de enfermedad'
+            th= 'Editar'
+        tbody
+          each com in como
+            tr
+              td= com.nombre
+              td
+                a(class=['ui button basic icon'] href='http://localhost:3000/modificar/'+com.id data-inverted  data-tooltip='modificar' data-position='top center')
+                  i(class=['pencil icon'])
+
+  script(src='/javascripts/com.js')

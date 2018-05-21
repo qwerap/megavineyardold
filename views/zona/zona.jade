@@ -1,0 +1,25 @@
+extends ../templates/default
+
+block content
+
+
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['sixteen','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Listado de Zonas en Viñedo.'
+
+      table(class=['ui', 'table', 'celled'] id='tbl-zona')
+        thead
+          tr
+            th= 'Identificacion de Zona.'
+            th= 'Acciones.'
+        tbody
+          each zonas in zona
+            tr
+              td= zonas.nombre
+              td
+                a(class=['ui button basic icon'] href='http://localhost:3000/modificarzo/'+zonas.id_zona data-inverted  data-tooltip='Modificar.' data-position='top center')
+                  i(class=['pencil icon'])
+
+  script(src='/javascripts/com.js')

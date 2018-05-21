@@ -1,0 +1,29 @@
+extends ../templates/default
+
+block content
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['sixteen','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Listado de clientes asociados'
+
+      table(class=['ui', 'table', 'celled'] id='tbl-cliente')
+        thead
+          tr
+            th= 'Nombre Empresa'
+            th= 'Teléfono de Contacto'
+            th= 'Encargado de la Empresa'
+            th= 'Ubicación'
+            th= 'Acciones'
+        tbody
+          each clientes in cliente
+            tr
+              td= clientes.nombre_empresa
+              td= clientes.telefono
+              td= clientes.encargado
+              td= clientes.ubicacion
+              td
+                a(class=['ui button basic icon'] href='http://localhost:3000/modificarcli/'+clientes.id_cliente data-inverted  data-tooltip='Actualizar Información' data-position='top center')
+                  i(class=['pencil icon'])
+
+  script(src='/javascripts/com.js')

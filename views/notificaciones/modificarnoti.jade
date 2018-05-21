@@ -1,0 +1,27 @@
+extends ../templates/default
+
+block content
+
+
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['ten','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Actualizar Notificación'
+
+      div(class='form-nuevaficha')
+        form(class=['ui', 'form'] action='http://localhost:3000/editarnoti' method='post')
+          div(class=['ui', 'field'])
+            label(for='codigo')= 'Codigo'
+            input(type='text' name='codigo' placeholder='Codigo' value=ListNotificacion[0].id_mantencion)
+          div(class=['ui', 'field'])
+            label(for='asunto')= 'Asunto'
+            input(type='text' name='asunto' placeholder='Nombre enfermedad' value=ListNotificacion[0].asunto)
+          div(class=['ui', 'field'])
+            label(for='detalle_m')= 'Detalle Mantención'
+            input(type='text' name='detalle_m' placeholder='Cambiar Detalle' value=ListNotificacion[0].detalle_m)
+          div(class=['ui', 'field'])
+            button(class=['ui', 'button', basic, 'black'])= 'Actualizar'
+            div(class=['ui', 'message', 'error'])
+
+  script(src='/javascripts/validacion.js')

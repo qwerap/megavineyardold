@@ -1,0 +1,24 @@
+extends ../templates/default
+
+block content
+
+
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['ten','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Modificar enfermedad'
+
+      div(class='form-nuevaficha')
+        form(class=['ui', 'form'] action='http://localhost:3000/editar' method='post')
+          div(class=['ui', 'field'])
+            label(for='id')= 'ID'
+            input(type='text' name='id' placeholder='ID de comorbilidad' value=ListComo[0].id)
+          div(class=['ui', 'field'])
+            label(for='nombre')= 'Nombre'
+            input(type='text' name='nombre' placeholder='Nombre enfermedad' value=ListComo[0].nombre)
+          div(class=['ui', 'field'])
+            button(class=['ui', 'button', basic, 'black'])= 'Modificar'
+            div(class=['ui', 'message', 'error'])
+
+  script(src='/javascripts/validacion.js')

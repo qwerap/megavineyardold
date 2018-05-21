@@ -1,0 +1,31 @@
+extends ../templates/default
+
+block content
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['sixteen','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Listado de Usuarios en Viñedos.'
+
+      table(class=['ui', 'table', 'celled'] id='tbl-usuarios')
+        thead
+          tr
+            th= 'ID Usuario.'
+            th= 'Email.'
+            th= 'Nombre de Usuario.'
+            th= 'Contraseña.(Por motivos de seguridad se encuentra encriptada)'
+            th= 'Id Rol.'
+            th= 'Acciones.'
+        tbody
+          each user in users
+            tr
+              td= user.id_u
+              td= user.email
+              td= user.nombre
+              td= user.password
+              td= user.rol
+              td
+                a(class=['ui button basic icon'] href='http://localhost:3000/modificaru/'+users.id_u data-inverted  data-tooltip='Modificar.' data-position='top center')
+                  i(class=['pencil icon'])
+
+  script(src='/javascripts/com.js')

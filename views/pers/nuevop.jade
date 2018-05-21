@@ -1,0 +1,27 @@
+extends ../templates/default
+
+block content
+
+
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['ten','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Agregar Enfermedad'
+
+      div(class='form-nuevacom')
+        form(class=['ui', 'form'] action='http://localhost:3000/nuevaCom' method='post')
+          div(class=['ui', 'field'])
+            label(for='nombre')= 'Nombre'
+            input(type='text' name='nombre' placeholder='Nombre Enfermedad.')
+          div(class=['ui', 'field'])
+            button(class=['ui', 'button', basic, 'black'])= 'Guardar'
+            div(class=['ui', 'message', 'error'])
+
+      if info != undefined
+            div(class=['ui', 'message', 'success'])
+              i(class=['close', 'icon'])
+              div(class='header')= 'registrado'
+              p= info
+
+  script(src='/javascripts/validacion.js')

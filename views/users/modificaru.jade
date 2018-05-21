@@ -1,0 +1,31 @@
+extends ../templates/default
+
+block content
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['ten','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Actualización de datos de usuarios'
+
+      div(class='form-nuevauser')
+        form(class=['ui', 'form'] action='http://localhost:3000/editaru' method='post')
+          div(class=['ui', 'field'])
+            label(for='id_u')= 'i'
+            input(type='text' name='id_u' placeholder='id_u' value=ListUsers[0].id_u)
+          div(class=['ui', 'field'])
+            label(for='email')= 'Email Usuario.'
+            input(type='text' name='email' placeholder='Email' value=ListUsers[0].email)
+          div(class=['ui', 'field'])
+            label(for='nombre')= 'Nombre Usuario.'
+            input(type='text' name='nombre' placeholder='Nombre' value=ListUsers[0].nombre)
+          div(class=['ui', 'field'])
+            label(for='password')= 'Contraseña Usuario.'
+            input(type='text' name='password' placeholder='Contraseña' value=ListUsers[0].password)
+          div(class=['ui', 'field'])
+            label(for='rol')= 'Rol de Usuario.'
+            input(type='text' name='rol' placeholder='Rol' value=ListUsers[0].rol)
+          div(class=['ui', 'field'])
+            button(class=['ui', 'button', basic, 'black'])= 'Actualizar Cambios'
+            div(class=['ui', 'message', 'error'])
+
+  script(src='/javascripts/validacion.js')

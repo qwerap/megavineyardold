@@ -1,0 +1,36 @@
+extends ../templates/default
+
+block content
+
+
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['ten','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Agregar Nuevo Cliente Asociados.'
+
+      div(class='form-nuevacli')
+        form(class=['ui', 'form'] action='http://localhost:3000/nuevoCli' method='post')
+          div(class=['ui', 'field'])
+            label(for='nombre_empresa')= 'Nombre Empresa'
+            input(type='text' name='nombre_empresa' placeholder='Nombre de la empresa.')
+          div(class=['ui', 'field'])
+            label(for='telefono')= 'Telefono de la Empresa'
+            input(type='text' name='telefono' placeholder='Telefono de contacto de la empresa.')
+          div(class=['ui', 'field'])
+            label(for='encargado')= 'Nombre del encargado o administrador de la empresa'
+            input(type='text' name='encargado' placeholder='Nombre y Apellido.')
+          div(class=['ui', 'field'])
+            label(for='ubicacion')= 'Ubicación'
+            input(type='text' name='ubicacion' placeholder='Dirección en la que se encuentra la empresa.')
+          div(class=['ui', 'field'])
+            button(class=['ui', 'button', basic, 'black'])= 'Agregar Cliente'
+            div(class=['ui', 'message', 'error'])
+
+      if info != undefined
+            div(class=['ui', 'message', 'success'])
+              i(class=['close', 'icon'])
+              div(class='header')= 'Agregado Exitosamente!!'
+              p= info
+
+  script(src='/javascripts/validacioncliente.js')

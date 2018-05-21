@@ -1,0 +1,25 @@
+extends ../templates/default
+
+block content
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['ten','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Agregar Zona'
+
+      div(class='form-nuevazona')
+        form(class=['ui', 'form'] action='http://localhost:3000/nuevaZona' method='post')
+          div(class=['ui', 'field'])
+            label(for='nombre')= 'Nombre Zona'
+            input(type='text' name='nombre' placeholder='Nombre Zona. (Puede identificarlo con una letra)')
+          div(class=['ui', 'field'])
+            button(class=['ui', 'button', basic, 'black'])= 'Agregar Zona'
+            div(class=['ui', 'message', 'error'])
+
+      if info != undefined
+            div(class=['ui', 'message', 'success'])
+              i(class=['close', 'icon'])
+              div(class='header')= 'Registrado!!'
+              p= info
+
+  script(src='/javascripts/validacionzona.js')

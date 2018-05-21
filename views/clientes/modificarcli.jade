@@ -1,0 +1,33 @@
+extends ../templates/default
+
+block content
+
+
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['ten','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Actualizar Información'
+
+      div(class='form-nuevocliente')
+        form(class=['ui', 'form'] action='http://localhost:3000/editarcli' method='post')
+          div(class=['ui', 'field'])
+            label(for='id_cliente')= 'Codigo'
+            input(type='text' name='id_cliente' placeholder='ID de la Empresa' value=ListCliente[0].id_cliente)
+          div(class=['ui', 'field'])
+            label(for='nombre_empresa')= 'Nombre de la Empresa'
+            input(type='text' name='nombre_empresa' placeholder='Nombre de la Empresa' value=ListCliente[0].nombre_empresa)
+          div(class=['ui', 'field'])
+            label(for='telefono')= 'Telefono de Contacto'
+            input(type='text' name='telefono' placeholder='Telefono de contacto' value=ListCliente[0].telefono)
+          div(class=['ui', 'field'])
+            label(for='encargado')= 'Nombre del Encargado o Administrador de la Empresa'
+            input(type='text' name='encargado' placeholder='Nombre del Encargado' value=ListCliente[0].encargado)
+          div(class=['ui', 'field'])
+            label(for='ubicacion')= 'Dirección de la Empresa'
+            input(type='text' name='ubicacion' placeholder='Dirección de la Empresa' value=ListCliente[0].ubicacion)
+          div(class=['ui', 'field'])
+            button(class=['ui', 'button', basic, 'black'])= 'Actualizar Información'
+            div(class=['ui', 'message', 'error'])
+
+  script(src='/javascripts/validacion.js')

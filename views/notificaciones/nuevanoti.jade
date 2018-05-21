@@ -1,0 +1,30 @@
+extends ../templates/default
+
+block content
+
+
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['ten','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Ingresar Notificación de Mantención Para el Viñedo.'
+
+      div(class='form-nuevanoti')
+        form(class=['ui', 'form'] action='http://localhost:3000/nuevaNoti' method='post')
+          div(class=['ui', 'field'])
+            label(for='asunto')= 'Asunto de la Mantención'
+            input(type='text' name='asunto' placeholder='Ingrese una breve reseña.')
+          div(class=['ui', 'field'])
+            label(for='detalle_m')= 'Ingrese las instrucciones o pasos a seguir para la Mantención'
+            input(type='text' name='detalle_m' placeholder='no superar los 300 caracteres.')
+          div(class=['ui', 'field'])
+            button(class=['ui', 'button', basic, 'black'])= 'Ingresar Notificación'
+            div(class=['ui', 'message', 'error'])
+
+      if info != undefined
+            div(class=['ui', 'message', 'success'])
+              i(class=['close', 'icon'])
+              div(class='header')= 'Ingresado Correctamente!'
+              p= info
+
+  script(src='/javascripts/validacionnotif.js')

@@ -1,0 +1,27 @@
+extends ../templates/default
+
+block content
+
+
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['sixteen','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Lista de Notificaciones para la mantencion'
+
+      table(class=['ui', 'table', 'celled'] id='tbl-notificacion')
+        thead
+          tr
+            th= 'Codigo'
+            th= 'Asunto'
+            th= 'Descripción'
+            th= 'Editar'
+        tbody
+          each mantencion in notificacion
+            tr
+              td= mantencion.id_mantencion
+              td= mantencion.asunto
+              td= mantencion.detalle_m
+              td
+                a(class=['ui button basic icon'] href='http://localhost:3000/modificarnoti/'+mantencion.id_mantencion data-inverted  data-tooltip='Modificar' data-position='top center')
+                  i(class=['pencil icon'])

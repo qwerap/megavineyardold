@@ -1,0 +1,8 @@
+extends templates/default
+
+block content
+  h3= 'La tecnología al alcance de tu mano.'
+
+  if isAuthenticated
+    p= 'Bienvenido Don ' + user.nombre
+    p= ' Sitio en Construcción  '

@@ -1,0 +1,22 @@
+extends ../templates/default
+
+block content
+
+  div(class=['ui','container', 'grid', 'stackable'])
+    div(class=['ten','wide','column'])
+
+      h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Actualización de cambios en la zona:'
+
+      div(class='form-nuevazona')
+        form(class=['ui', 'form'] action='http://localhost:3000/editarzo' method='post')
+          div(class=['ui', 'field'])
+            label(for='id_zona')= 'Código identificador.'
+            input(type='text' name='id_zona' placeholder='ID' value=ListZona[0].id_zona)
+          div(class=['ui', 'field'])
+            label(for='nombre')= 'Nombre o Atributo.'
+            input(type='text' name='nombre' placeholder='Atributo para identificar' value=ListZona[0].nombre)
+          div(class=['ui', 'field'])
+            button(class=['ui', 'button', basic, 'black'])= 'Actualizar Cambios'
+            div(class=['ui', 'message', 'error'])
+
+  script(src='/javascripts/validacion.js')
