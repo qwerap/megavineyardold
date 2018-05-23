@@ -12,9 +12,9 @@ nav(class="navbar navbar-default")
       ul(class="nav navbar-nav navbar-right")
         if !isAuthenticated
           li
-            a(href="http://localhost:3000/auth/signin")= 'Ingresar al Sistema'
+            a(href="mevagineyard.azurewebsites.net/auth/signin")= 'Ingresar al Sistema'
           li
-            a(href="http://localhost:3000/auth/signup")= 'Registro al Sistema'
+            a(href="mevagineyard.azurewebsites.net/auth/signup")= 'Registro al Sistema'
         if isAuthenticated && user.rol == 1
               li
                 a(href="http://localhost:3000/auth/signup")= 'Registrar Usuario'
