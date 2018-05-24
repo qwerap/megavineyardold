@@ -1,7 +1,7 @@
 var config = {
-	host : 'megavineyard.database.windows.net',
-	user : 'roger',
-	password : '',
+	host : 'megavino.mysql.database.azure.com',
+	user : 'roger@megavino',
+	password : 'Soporte.$2018',
 	database : 'vino'
 };
 
