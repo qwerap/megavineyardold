@@ -1,5 +1,5 @@
 var config = {
-	host : 'localhost',
+	host : 'megavineyard.database.windows.net',
 	user : 'roger',
 	password : '',
 	database : 'vino'
