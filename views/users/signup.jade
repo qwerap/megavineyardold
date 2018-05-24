@@ -6,7 +6,7 @@ block content
       div(class='panel panel-default')
         div(class='panel-heading')= 'Registro De Usuario.'
         div(class='panel-body')
-          form(action='mevagineyard.azurewebsites.net/auth/signup' method='post' autocomplete='off')
+          form(action='./auth/signup' method='post' autocomplete='off')
             div(class='form-group')
               label(for="email")= 'Email.'
               input(type='email' name='email' id='email' placeholder='Email' class='form-control')
@@ -20,4 +20,3 @@ block content
               label(for="rol")= 'rol.'
               input(type='Number' name='rol' id='rol' placeholder='1= S. Administrador, 2= Agrónomo, 3= Enólogo' class='form-control')
             button(type="submit" class='btn btn-default')= 'Registrar'
-z
