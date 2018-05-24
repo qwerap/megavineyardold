@@ -17,43 +17,43 @@ nav(class="navbar navbar-default")
             a(href="./auth/signup")= 'Registro al Sistema'
         if isAuthenticated && user.rol == 1
               li
-                a(href="http://localhost:3000/auth/signup")= 'Registrar Usuario'
-                a(href="http://localhost:3000/usuarios")= 'Listado Usuarios'
+                a(href="./auth/signup")= 'Registrar Usuario'
+                a(href="./usuarios")= 'Listado Usuarios'
               li
-                a(href="http://localhost:3000/nuevozo")= 'Agregar Zona'
-                a(href="http://localhost:3000/zona")= 'Ver Zonas'
+                a(href="./nuevozo")= 'Agregar Zona'
+                a(href="./zona")= 'Ver Zonas'
               li
-                a(href="http://localhost:3000/nuevocli")= 'Agregar Clientes'
-                a(href="http://localhost:3000/cliente")= 'Ver Clientes'
+                a(href="./nuevocli")= 'Agregar Clientes'
+                a(href="./cliente")= 'Ver Clientes'
               li
                 a(href="/")= 'Ver Temperatura Y Humedad'
               li
                 a(href="/")= 'Generar Reportes'
               li
-                a(href="http://localhost:3000/nuevanoti")= 'Agregar Notificacion de Mantención '
-                a(href="http://localhost:3000/notificacion")= 'Ver Notificaciones'
+                a(href="./nuevanoti")= 'Agregar Notificacion de Mantención '
+                a(href="./notificacion")= 'Ver Notificaciones'
               li
-                a(href="http://localhost:3000/auth/logout")= 'Cerrar Sesión'
+                a(href="./auth/logout")= 'Cerrar Sesión'
         if isAuthenticated && user.rol == 2
               li
-                a(href="http://localhost:3000/nuevozo")= 'Agregar Zona'
-                a(href="http://localhost:3000/zona")= 'Ver Zonas'
+                a(href="./nuevozo")= 'Agregar Zona'
+                a(href="./zona")= 'Ver Zonas'
               li
                 a(href="/")= 'Ver Temperatura Y Humedad'
               li
                 a(href="/")= 'Generar Reportes'
               li
-                a(href="http://localhost:3000/nuevanoti")= 'Agregar Notificacion de Mantención '
-                a(href="http://localhost:3000/notificacion")= 'Ver Notificaciones'
+                a(href="./nuevanoti")= 'Agregar Notificacion de Mantención '
+                a(href="./notificacion")= 'Ver Notificaciones'
               li
-                a(href="http://localhost:3000/auth/logout")= 'Cerrar Sesión'
+                a(href="./auth/logout")= 'Cerrar Sesión'
         if isAuthenticated && user.rol == 3
               li
                 a(href="/")= 'Ver Temperatura Y Humedad'
               li
                 a(href="/")= 'Generar Reportes'
               li
-                a(href="http://localhost:3000/nuevanoti")= 'Agregar Notificacion de Mantención '
-                a(href="http://localhost:3000/notificacion")= 'Ver Notificaciones'
+                a(href="./nuevanoti")= 'Agregar Notificacion de Mantención '
+                a(href="./notificacion")= 'Ver Notificaciones'
               li
-                a(href="http://localhost:3000/auth/logout")= 'Cerrar Sesión'
+                a(href="./auth/logout")= 'Cerrar Sesión'
