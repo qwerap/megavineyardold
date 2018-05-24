@@ -12,48 +12,48 @@ nav(class="navbar navbar-default")
       ul(class="nav navbar-nav navbar-right")
         if !isAuthenticated
           li
-            a(href="./auth/signin")= 'Ingresar al Sistema'
+            a(href="/auth/signin")= 'Ingresar al Sistema'
           li
-            a(href="./auth/signup")= 'Registro al Sistema'
+            a(href="/auth/signup")= 'Registro al Sistema'
         if isAuthenticated && user.rol == 1
               li
-                a(href="./auth/signup")= 'Registrar Usuario'
-                a(href="./usuarios")= 'Listado Usuarios'
+                a(href="/auth/signup")= 'Registrar Usuario'
+                a(href="/usuarios")= 'Listado Usuarios'
               li
-                a(href="./nuevozo")= 'Agregar Zona'
-                a(href="./zona")= 'Ver Zonas'
+                a(href="/nuevozo")= 'Agregar Zona'
+                a(href="/zona")= 'Ver Zonas'
               li
-                a(href="./nuevocli")= 'Agregar Clientes'
-                a(href="./cliente")= 'Ver Clientes'
+                a(href="/nuevocli")= 'Agregar Clientes'
+                a(href="/cliente")= 'Ver Clientes'
               li
                 a(href="/")= 'Ver Temperatura Y Humedad'
               li
                 a(href="/")= 'Generar Reportes'
               li
-                a(href="./nuevanoti")= 'Agregar Notificacion de Mantención '
-                a(href="./notificacion")= 'Ver Notificaciones'
+                a(href="/nuevanoti")= 'Agregar Notificacion de Mantención '
+                a(href="/notificacion")= 'Ver Notificaciones'
               li
-                a(href="./auth/logout")= 'Cerrar Sesión'
+                a(href="/auth/logout")= 'Cerrar Sesión'
         if isAuthenticated && user.rol == 2
               li
-                a(href="./nuevozo")= 'Agregar Zona'
-                a(href="./zona")= 'Ver Zonas'
+                a(href="/nuevozo")= 'Agregar Zona'
+                a(href="/zona")= 'Ver Zonas'
               li
                 a(href="/")= 'Ver Temperatura Y Humedad'
               li
                 a(href="/")= 'Generar Reportes'
               li
-                a(href="./nuevanoti")= 'Agregar Notificacion de Mantención '
-                a(href="./notificacion")= 'Ver Notificaciones'
+                a(href="/nuevanoti")= 'Agregar Notificacion de Mantención '
+                a(href="/notificacion")= 'Ver Notificaciones'
               li
-                a(href="./auth/logout")= 'Cerrar Sesión'
+                a(href="/auth/logout")= 'Cerrar Sesión'
         if isAuthenticated && user.rol == 3
               li
                 a(href="/")= 'Ver Temperatura Y Humedad'
               li
                 a(href="/")= 'Generar Reportes'
               li
-                a(href="./nuevanoti")= 'Agregar Notificacion de Mantención '
-                a(href="./notificacion")= 'Ver Notificaciones'
+                a(href="/nuevanoti")= 'Agregar Notificacion de Mantención '
+                a(href="/notificacion")= 'Ver Notificaciones'
               li
-                a(href="./auth/logout")= 'Cerrar Sesión'
+                a(href="/auth/logout")= 'Cerrar Sesión'
