@@ -1,7 +1,7 @@
 var config = {
 	host : 'megavino.mysql.database.azure.com',
 	user : 'roger@megavino',
-	password : 'Soporte.$2018',
+	password : '',
 	database : 'vino'
 };
 
