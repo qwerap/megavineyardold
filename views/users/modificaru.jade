@@ -8,7 +8,7 @@ block content
       h2(class=['ui', 'header', 'light blue', 'dividing'])= 'Actualización de datos de usuarios'
 
       div(class='form-nuevauser')
-        form(class=['ui', 'form'] action='http://localhost:3000/editaru' method='post')
+        form(class=['ui', 'form'] action='/editaru' method='post')
           div(class=['ui', 'field'])
             label(for='id_u')= 'i'
             input(type='text' name='id_u' placeholder='id_u' value=ListUsers[0].id_u)
